@@ -2,9 +2,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-       printHello(5);
-       int result = sumMultiplesOf7(10,50);
-       System.out.println("Sum of multiples of 7 between 10 and 50: " + result);
+       int [] arr = {1,2,3,4,5,6,7,8,9,10} ;
+       itn target = 7;
+       int result = binarySearch(arr, target, 0,arr.length - 1);
 
     }
     public static void countDown(int num)
@@ -87,7 +87,22 @@ public class Main {
             return currentNumber + sumMultiplesOf7(n1+1, n2);
         }
            }
+           //Problem 3
+         public static int binarySearch(int[] arr, int target, int low , int high){
+        if (low <= high) {
+            int mid = low + (high - low) / 2;
 
+            if (arr[mid] == target) {
+                return mid;
+            } else if (arr[mid] < target)
+                return binarySearch(arr, target, mid + 1, high);
+        }
+        else {
+            return binarySearch(arr, target, low, mid - 1);
+        }
+
+        return -1;
+         }
 
 
 
