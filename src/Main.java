@@ -36,16 +36,20 @@ public class Main {
         //Task02
         public static int gcd(int x, int y) {
 
-            if (x % y == 0) //base case
+            if (x == y){ //base case
 
-                return y;
+                return x;
+         }
+              else if( x > y){
+                return gcd(x - y, y);
+            } else {
+                 return gcd(x,y-x);
+            }
 
-            else
-
-                return gcd(y, x % y);
+            }
 
         }
-        // Output: GCD: 6 
+        // Output: GCD: 6
 
 
 }
