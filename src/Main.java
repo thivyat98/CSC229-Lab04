@@ -13,6 +13,7 @@ public class Main {
                 System.out.println("Blastoff!");
 
             else {
+                if (num % 2 == 0) {
 
                 System.out.println("...");
 
