@@ -1,9 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
-       int result = gcd(48,18);
-       System.out.println("GCD: " + result);
+
        printHello(5);
+       int result = sumMultiplesOf7(10,50);
+       System.out.println("Sum of multiples of 7 between 10 and 50: " + result);
 
     }
     public static void countDown(int num)
@@ -70,12 +71,23 @@ public class Main {
             //and fib(n-2)) which creates a binary tree of recursive calls
 
         }
+        //problem 1
            public static void printHello(int n) {
               if (n > 0) {
             System.out.println("Hello World");
             printHello(n-1);
         }
            }
+           //problem2
+           public static int sumMultiplesOf7(int n1, int n2 ) {
+          if(n1 > n2) {
+            return 0;
+        }  else {
+            int currentNumber = (n1 % 7 == 0) ? n1 : 0;
+            return currentNumber + sumMultiplesOf7(n1+1, n2);
+        }
+           }
+
 
 
 
