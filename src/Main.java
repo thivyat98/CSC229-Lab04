@@ -47,9 +47,31 @@ public class Main {
             }
 
             }
-
-        }
         // Output: GCD: 6
 
+       //Task03
+        int fib(int n)
 
-}
+        {
+
+            if (n <= 0) // base case
+
+                return 0;
+
+            else if (n == 1) // base case
+
+                return 1;
+
+            else
+
+                return fib(n–1) + fib(n–2);
+            //Time complexity is O(2^n), function makes two additional recursive calls (fib(n-1)
+            //and fib(n-2)) which creates a binary tree of recursive calls
+
+        }
+
+
+
+
+
+        }
