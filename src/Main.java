@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
        int result = gcd(48,18);
        System.out.println("GCD: " + result);
+       printHello(5);
 
     }
     public static void countDown(int num)
@@ -69,7 +70,12 @@ public class Main {
             //and fib(n-2)) which creates a binary tree of recursive calls
 
         }
-
+           public static void printHello(int n) {
+              if (n > 0) {
+            System.out.println("Hello World");
+            printHello(n-1);
+        }
+           }
 
 
 
